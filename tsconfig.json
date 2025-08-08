@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "allowImportingTsExtensions": false,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "removeComments": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -27,6 +28,11 @@
     "baseUrl": ".",
     "types": [
       "node"
-    ]
+    ],
+    "paths": {
+      "~/*": [
+        "./app/*"
+      ]
+    }
   }
 }

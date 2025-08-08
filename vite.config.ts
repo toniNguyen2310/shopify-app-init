@@ -64,14 +64,29 @@ export default defineConfig({
       },
       presets: [vercelPreset()],
     }),
-
     tsconfigPaths(),
   ],
+  // Thêm cấu hình esbuild để hỗ trợ import assertions
+  esbuild: {
+    target: 'es2022',
+    supported: {
+      'import-assertions': true,
+    }
+  },
   build: {
     assetsInlineLimit: 0,
+    // Đặt target cho build
+    target: 'es2022'
   },
   optimizeDeps: {
     include: ["@shopify/app-bridge-react", "@shopify/polaris"],
+    // Cấu hình esbuild cho dependency optimization
+    esbuildOptions: {
+      target: 'es2022',
+      supported: {
+        'import-assertions': true,
+      }
+    }
   },
   css: {
     preprocessorOptions: {
