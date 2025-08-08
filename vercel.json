@@ -1,6 +1,6 @@
 {
     "functions": {
-        "app/entry.server.tsx": {
+        "api/server.js": {
             "includeFiles": "public/**"
         }
     },
