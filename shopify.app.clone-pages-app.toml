@@ -1,0 +1,25 @@
+    # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+    client_id = "dc1ba7c6447be6d960b805047f7b1af7"
+    name = "clone-pages-app"
+    handle = "clone-pages-app"
+    application_url = "https://latex-reduces-expansys-ri.trycloudflare.com"
+    embedded = true
+
+
+    [build]
+    include_config_on_deploy = true
+    automatically_update_urls_on_dev = true
+
+    [webhooks]
+    api_version = "2025-07"
+
+    [access_scopes]
+    # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+    scopes = "write_products"
+
+    [auth]
+    redirect_urls = ["https://latex-reduces-expansys-ri.trycloudflare.com/auth/callback", "https://latex-reduces-expansys-ri.trycloudflare.com/auth/shopify/callback", "https://latex-reduces-expansys-ri.trycloudflare.com/api/auth/callback"]
+
+    [pos]
+    embedded = false
