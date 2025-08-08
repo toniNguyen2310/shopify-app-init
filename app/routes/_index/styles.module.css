@@ -1,0 +1,208 @@
+/* Variables thay bằng giá trị trực tiếp */
+/* Mixins được viết trực tiếp vào các selector */
+
+/* Main container */
+.index {
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #2d3436;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heroText {
+  max-width: 580px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f2f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0 0 40px;
+  opacity: 0.9;
+}
+
+.heroForm {
+  margin-bottom: 16px;
+}
+
+.formGroup {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.shopInput {
+  flex: 1;
+  padding: 16px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.shopInput::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.installButton {
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.installButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.installButton:active {
+  transform: translateY(0);
+}
+
+.buttonIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.formHint {
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 0;
+  text-align: center;
+}
+
+/* Hero Visual */
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mockup {
+  width: 400px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.mockupScreen {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mockupHeader {
+  height: 40px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.mockupDots {
+  display: flex;
+  gap: 6px;
+}
+
+.mockupDots span:nth-child(1) {
+  background: #ff5f56;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.mockupDots span:nth-child(2) {
+  background: #ffbd2e;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.mockupDots span:nth-child(3) {
+  background: #27ca3f;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* ...Tiếp tục viết tất cả phần .features, .benefits, .cta tương tự,
+   thay $variable bằng giá trị gốc và @include bằng đoạn style mixin đã viết ở trên */
