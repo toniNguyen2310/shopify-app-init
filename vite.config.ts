@@ -73,4 +73,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ["@shopify/app-bridge-react", "@shopify/polaris"],
   },
+  css: {
+    preprocessorOptions: {
+      scss: {}
+    }
+  }
 }) satisfies UserConfig;

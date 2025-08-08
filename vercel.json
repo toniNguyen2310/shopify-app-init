@@ -1,4 +1,10 @@
 {
-    "buildCommand": "npx remix build",
-    "outputDirectory": "public"
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "outputDirectory": "build",
+    "functions": {
+        "api/**/*.js": {
+            "runtime": "nodejs18.x"
+        }
+    }
 }
