@@ -1,3 +1,9 @@
 {
-    "buildCommand": "remix vite:build"
+    "functions": {
+        "api/server.js": {
+            "runtime": "nodejs20.x"
+        }
+    },
+    "buildCommand": "npx remix build",
+    "outputDirectory": "public"
 }

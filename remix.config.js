@@ -1,6 +1,7 @@
 /** @type {import('@remix-run/dev').AppConfig} */
-module.exports = {
-    serverBuildTarget: "vercel",
-    server: "./server.js", // hoặc server.ts tùy bạn
+export default {
     ignoredRouteFiles: ["**/.*"],
+    serverModuleFormat: "esm",
+    serverPlatform: "node",
+    serverBuildTarget: "node-cjs", // hoặc để default tuỳ nhu cầu
 };
