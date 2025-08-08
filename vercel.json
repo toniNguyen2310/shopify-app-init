@@ -1,20 +1,8 @@
 {
-    "buildCommand": "npm run build",
-    "outputDirectory": "build",
-    "framework": "remix",
     "functions": {
         "app/entry.server.tsx": {
-            "maxDuration": 30
+            "includeFiles": "public/**"
         }
     },
-    "routes": [
-        {
-            "src": "/build/(.*)",
-            "dest": "/build/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/app/entry.server.tsx"
-        }
-    ]
+    "buildCommand": "remix vite:build"
 }

@@ -89,7 +89,7 @@ export async function action({ request, params }: ActionFunctionArgs) {
                         updatedAt: new Date(),
                     },
                     {
-                        new: true, // Return updated document
+                        new: true,
                         runValidators: true // Run mongoose validations
                     }
                 );

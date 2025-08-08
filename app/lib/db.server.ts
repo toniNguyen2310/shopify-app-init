@@ -1,11 +1,17 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGO_URI || "mongodb+srv://admin:231001@cluster0.j1dook0.mongodb.net/shopclapages?retryWrites=true&w=majority&appName=Cluster0";
-
+// GIẢI PHÁP 1: Kiểm tra trước khi connect (Recommended)
 export async function connectDB() {
     if (mongoose.connection.readyState >= 1) {
         console.log('⚠️ MongoDB already connected');
         return;
+    }
+
+    const MONGODB_URI = process.env.MONGO_URI;
+
+    if (!MONGODB_URI) {
+        console.error('❌ MONGO_URI environment variable is not defined');
+        throw new Error('Database configuration error: MONGO_URI is required');
     }
 
     try {
@@ -13,6 +19,6 @@ export async function connectDB() {
         console.log('✅ MongoDB connected successfully');
     } catch (error) {
         console.error('❌ MongoDB connection failed:', error);
+        throw error;
     }
 }
-

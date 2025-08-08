@@ -3,7 +3,7 @@
     client_id = "dc1ba7c6447be6d960b805047f7b1af7"
     name = "clone-pages-app"
     handle = "clone-pages-app"
-    application_url = "https://latex-reduces-expansys-ri.trycloudflare.com"
+    application_url = "https://kenya-carroll-excess-upon.trycloudflare.com"
     embedded = true
 
 
@@ -19,7 +19,7 @@
     scopes = "write_products"
 
     [auth]
-    redirect_urls = ["https://latex-reduces-expansys-ri.trycloudflare.com/auth/callback", "https://latex-reduces-expansys-ri.trycloudflare.com/auth/shopify/callback", "https://latex-reduces-expansys-ri.trycloudflare.com/api/auth/callback"]
+    redirect_urls = ["https://kenya-carroll-excess-upon.trycloudflare.com/auth/callback", "https://kenya-carroll-excess-upon.trycloudflare.com/auth/shopify/callback", "https://kenya-carroll-excess-upon.trycloudflare.com/api/auth/callback"]
 
     [pos]
     embedded = false
