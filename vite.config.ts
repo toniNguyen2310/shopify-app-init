@@ -88,9 +88,11 @@ export default defineConfig({
       }
     }
   },
-  css: {
-    preprocessorOptions: {
-      scss: {}
-    }
+  ssr: {
+    noExternal: [
+      "@shopify/shopify-app-remix",
+      "@shopify/polaris"
+    ]
   }
+
 }) satisfies UserConfig;
